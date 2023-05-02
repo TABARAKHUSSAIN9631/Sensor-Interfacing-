@@ -50,6 +50,33 @@ Distance = (Speed x Time) / 2 = (34cm/ms x 1.5ms) / 2 = 25.5cm.
 So, if the Echo pin was HIGH for 2ms (which we measure using the pulseIn() function), the distance from the sensor to the object is 34cm.
 
 ## PROGRAM:
+void setup() {
+pinMode(13, OUTPUT);
+Serial.begin(9600);
+}
+void loop() {
+if (Serial.available() > 0) {
+int state = Serial.read();
+if (state == '5') {
+digitalWrite(13, HIGH);
+Serial.println("LED ON");
+}
+if (state == '8' ) {
+digitalWrite(13, LOW);
+Serial.println("LED OFF");
+}
+}
+delay(50);
+}
+void setup() {
+Serial.begin(9600);
+}
+void loop() {
+Serial.print('H');
+delay(1000);
+Serial.print('L');
+delay(1000);
+}
 ## CIRCUIT DIAGRAM:
 ## OUTPUT:
 ## RESULT:
