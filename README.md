@@ -50,34 +50,39 @@ Distance = (Speed x Time) / 2 = (34cm/ms x 1.5ms) / 2 = 25.5cm.
 So, if the Echo pin was HIGH for 2ms (which we measure using the pulseIn() function), the distance from the sensor to the object is 34cm.
 
 ## PROGRAM:
-void setup() {
-pinMode(13, OUTPUT);
-Serial.begin(9600);
+void setup() {</br>
+pinMode(13, OUTPUT);</br>
+Serial.begin(9600);</br>
+}</br>
+void loop() {</br>
+if (Serial.available() > 0) {</br>
+int state = Serial.read();</br>
+if (state == '5') {</br>
+digitalWrite(13, HIGH);</br>
+Serial.println("LED ON");</br>
+}</br>
+if (state == '8' ) {</br>
+digitalWrite(13, LOW);</br>
+Serial.println("LED OFF");</br>
+}</br>
+}</br>
+delay(50);</br>
 }
-void loop() {
-if (Serial.available() > 0) {
-int state = Serial.read();
-if (state == '5') {
-digitalWrite(13, HIGH);
-Serial.println("LED ON");
-}
-if (state == '8' ) {
-digitalWrite(13, LOW);
-Serial.println("LED OFF");
-}
-}
-delay(50);
-}
-void setup() {
-Serial.begin(9600);
-}
-void loop() {
-Serial.print('H');
-delay(1000);
-Serial.print('L');
-delay(1000);
-}
+void setup() {</br>
+Serial.begin(9600);</br>
+}</br>
+void loop() {</br>
+Serial.print('H');</br>
+delay(1000);</br>
+Serial.print('L');</br>
+delay(1000);</br>
+}</br>
 ## CIRCUIT DIAGRAM:
+![WhatsApp Image 2023-05-02 at 9 07 45 AM (1)](https://user-images.githubusercontent.com/132323440/235723883-51a865fe-eec8-4ac7-87f9-04a3f478e3cc.jpeg)
+
 ## OUTPUT:
+![Uploading WhatsApp Image 2023-05-02 at 9.07.45 AM (1).jpeg…]()
+
 ## RESULT:
+Thus the logical operation was performed by Arduino UNO controller.
 Thus the distance of the obstacle is measured using ultrasonic sensor and display the value in serial monitor using Arduino UNO controller.
