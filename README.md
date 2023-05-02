@@ -81,7 +81,9 @@ delay(1000);</br>
 ![WhatsApp Image 2023-05-02 at 9 07 45 AM (1)](https://user-images.githubusercontent.com/132323440/235723883-51a865fe-eec8-4ac7-87f9-04a3f478e3cc.jpeg)
 
 ## OUTPUT:
-![Uploading WhatsApp Image 2023-05-02 at 9.07.45 AM (1).jpeg…]()
+
+![WhatsApp Image 2023-05-02 at 9 07 45 AM (1)](https://user-images.githubusercontent.com/132323440/235723883-51a865fe-eec8-4ac7-87f9-04a3f478e3cc.jpeg)
+
 
 ## RESULT:
 Thus the logical operation was performed by Arduino UNO controller.
